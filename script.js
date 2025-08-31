@@ -13,4 +13,8 @@ function arkaPlanDegistir(){
   ];
   document.body.style.background=g[Math.floor(Math.random()*g.length)];
 }
-alert("Hoş geldin İlay 🌸 Bu site artık senin playground’un!");
+// Sadece ilk ziyarette uyarı
+if(!localStorage.getItem("ilkGiris")){
+  alert("Hoş geldin İlay 🌸 Bu site artık senin playground’un!");
+  localStorage.setItem("ilkGiris","1");
+}
